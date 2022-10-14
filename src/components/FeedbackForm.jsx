@@ -1,3 +1,4 @@
+
 import {useState, useContext, useEffect} from 'react'
 import Card from "./shared/Card"
 import Button from './shared/Button';
@@ -5,9 +6,13 @@ import RatingSelect from './RatingSelect';
 import FeedbackContext from '../context/FeedbackContext';
 
 function FeedbackForm() {
+  //a state text and setText to update the text field
   const [text, setText] =  useState("");
+  //a state rating and setRating to update the rating field
   const [rating, setRating] =  useState("10");
+  //a state btnDisabled and setBtnDisabled to disable the submit button
   const [btnDisabled, setbtnisabled] =  useState(true);
+  // a state message and setMessage to update the message field
   const [message, setMessage] =  useState("");
   const {addFeedback, feedbackEdit, updateFeedback} = useContext(FeedbackContext);
 
@@ -35,9 +40,12 @@ function FeedbackForm() {
   }
    setText(e.target.value);
 }
+//A Function  handlesubmit that handleTextChange
 const handleSubmit = (e) => {
   e.preventDefault();
+  //if the text passed into the input is greater than 10 characters
   if(text.trim().length > 10){
+    
     const newFeedback = {
       text,
       rating,

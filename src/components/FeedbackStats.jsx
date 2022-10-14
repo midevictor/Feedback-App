@@ -5,7 +5,7 @@ import FeedbackContext from '../context/FeedbackContext'
 
 function FeedbackStats() {
   const { feedback } = useContext(FeedbackContext);
-  //Caculate readingss average usiong the reduce method
+  //Caculate readingss average using the reduce method
   let average = feedback.reduce((acc, cur) => {
     return acc + cur.rating
   }, 0) / feedback.length
@@ -23,3 +23,4 @@ function FeedbackStats() {
 //   feedback: PropTypes.array.isRequired,
 // }
 export default FeedbackStats
+//

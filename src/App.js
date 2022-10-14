@@ -11,7 +11,7 @@ import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./Pages/AboutPage";
 // import AboutIconLink from "./components/AboutIconLink";
 import AboutIconLink from "./components/AboutIconLink";
-//Imported the FeedbackProvider from te context
+//Imported the FeedbackProvider from the context
 import { FeedbackProvider } from "./context/FeedbackContext";
 //Imported the NavLink form react-router dom
 import { NavLink } from "react-router-dom";
